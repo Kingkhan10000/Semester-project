@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ff8453da;
+}
+.content{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 750px;
+    height: 400px;
+    background-color: #2D3142;
+    padding: 30px 20px;
+}
+.content form input{
+    outline: none;
+}
+.content form .fname{
+    margin-top: 10px;
+    display: flex;  
+    flex-direction: column;
+}
+.content form .fname label{
+    color: white;
+    font-size: 20px;
+}
+.content form .fname input{
+    width: 250px;
+    margin-top: 10px;
+    padding: 0 20px;
+    height: 50px;
+}   
+
+.content form .lname label{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.content form .lname input{
+    margin-top: 10px;
+    width: 250px;
+    padding: 0 20px;
+    height: 50px;
+}
+
+.content form .email label{
+    color: white;
+    color: white;
+    font-size: 20px;
+}
+.content form .email input{
+    margin-top: 10px;
+    width: 250px;
+    padding: 0 20px;
+    height: 50px;
+}
+
+
+.content form .lname{
+    display: flex;
+    flex-direction: column;
+}
+
+.content form .email{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content form .pass{
+    display: flex;
+    flex-direction: column;
+}
+
+.content form .pass label{
+    color: white;
+    font-size: 20px;
+}
+.content form .pass input{
+    margin-top: 10px;
+    width: 250px;
+    padding: 0 20px;
+    height: 50px;
+}
+.btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+.btn input{
+    cursor:pointer;
+    background-color: #ff8553;
+    color: white;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn input:hover{
+    background-color: #2D3142;
+    border: 2px solid #ff8553;
+}

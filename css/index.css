@@ -1,0 +1,1634 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    position: relative;
+}
+
+/* .preloader {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: 2s;
+    z-index: 10000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.preloader  body{
+    display: none;
+}
+
+.preloader.active {
+    opacity: 0;
+    z-index: -1;
+}
+
+
+
+.preloader .content{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: skyblue;
+}
+.preloader .content h1{
+    margin-top: 40%;
+    color: black;
+}
+
+.main{
+    display: none;
+}
+
+.main.active{
+    display: initial;
+} */
+
+nav {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    background-color: #2D3142;
+    z-index: 1000000;
+}
+
+nav .logo {
+    margin-left: 30px;
+    width: 220px;
+    height: 55px;
+}
+
+nav .logo img {
+    filter: invert(1);
+    width: 100%;
+    height: 100%;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+nav ul li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li .arrow {
+    margin-bottom: 2px;
+    margin-left: 2px;
+    width: 15px;
+    height: 15px;
+    transition-duration: 0.4s;
+}
+
+nav ul li .arrow img {
+    filter: invert(1);
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li a.active .arrow {
+    transform: rotate(90deg);
+}
+
+nav ul li a:hover {
+    color: #ff8553;
+
+}
+
+nav ul li a::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    left: 50%;
+    bottom: 32px;
+    background-color: #ff8553;
+    transition: 0.8s;
+}
+
+nav ul li a:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+nav .ticketlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
+
+nav .ticketlink a {
+    background-color: #ff8553;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+nav .ticketlink a:hover {
+    color: #ff8553;
+    background-color: #2D3142;
+    border: 30px solid #ff8553;
+}
+
+nav .ticketlink.leave a {
+    border: none;
+    background-color: #ff8553;
+    color: white;
+}
+
+nav ul li.group_menu_page {
+    display: flex;
+    position: relative;
+
+}
+
+nav ul li .group_list_page {
+    position: absolute;
+    background-color: #2D3142;
+    border: 2px solid #ff8553;
+    border-top: 4px solid #ff8553;
+    border-bottom: 4px solid #ff8553;
+    z-index: 1000000;
+    position: absolute;
+    height: 0px;
+    width: 150px;
+    left: 0;
+    opacity: 0;
+    top: 50px;
+    transition: 0.4s;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav ul li.group_menu_page:hover .group_list_page {
+    top: 80px;
+    opacity: 1;
+    height: 170px;
+}
+
+nav ul li .group_list_page li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    /* background-color: #66ccff; */
+    margin-top: 10px;
+}
+
+nav ul li .group_list_page li a {
+    /* background-color: red; */
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li .group_list_page li a::before {
+    display: none;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background: url(../images/chairwheel2.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: changeimg ease 15s;
+    animation-delay: 2s;
+    transition: 0.4s;
+}
+
+/* .banner:hover {
+    filter: brightness(0.1);
+} */
+/* @keyframes changeimg {
+    0% {
+        background: url(../images/chairwheel.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    25% {
+        background: url(../images/ambientferriswheel.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    50% {
+        background: url(../images/chairwheel2.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    100% {
+        background: url(../images/chairwheel.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+} */
+
+.banner .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 80px;
+    width: 600px;
+    height: 450px;
+    /* border: 2px solid #ff8553; */
+    /* background: linear-gradient(to bottom right, #66ccff 11%, #ffcccc 77%); */
+    border-radius: 5px;
+    animation: slidecontent ease-in-out 1.2s;
+    box-shadow: 4px 4px 10px gray;
+}
+
+.banner .content .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: black;
+    z-index: 100;
+    opacity: 0.7;
+}
+
+@keyframes slidecontent {
+    0% {
+        margin-left: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 80px;
+        opacity: 1;
+    }
+}
+
+
+.content h1 {
+    margin-top: 15px;
+    margin-left: 20px;
+    z-index: 10000;
+    color: white;
+    font-size: 60px;
+    animation: contenthead ease-in-out 2s;
+}
+
+@keyframes contenthead {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content h1:current {
+    background-color: red;
+    color: white;
+}
+
+.content h1 span {
+    color: #ff8553;
+    z-index: 1;
+    font-style: italic;
+}
+
+.content p {
+    color: white;
+    z-index: 10000;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    font-size: 18px;
+    animation: para ease-in-out 1.5s;
+}
+
+@keyframes para {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.content button {
+    position: relative;
+    margin-top: 130px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    z-index: 10000;
+    animation: buttonstyle ease-in-out 1.5s;
+}
+
+@keyframes buttonstyle {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    top: -25px;
+    opacity: 0;
+    background-color: #ff8553;
+    transition: 0.4s;
+}
+
+.content button:hover::before {
+    opacity: 1;
+    top: -10px;
+}
+
+
+.content button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: -25px;
+    opacity: 0;
+    background-color: #ff8553;
+    transition: 0.4s;
+}
+
+.content button:hover::after {
+    opacity: 1;
+    bottom: -10px;
+}
+
+
+.content button a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #ff8553;
+    color: white;
+    transition: 0.4s;
+}
+
+.content button a:hover {
+    background-color: #2D3142;
+}
+
+.content button a::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: -25px;
+    top: 0;
+    opacity: 0;
+    background-color: #ff8553;
+    transition: 0.4s;
+}
+
+.content button a:hover::before {
+    left: -10px;
+    opacity: 1;
+}
+
+.content button a::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    right: -25px;
+    top: 0;
+    opacity: 0;
+    background-color: #ff8553;
+    transition: 0.4s;
+}
+
+.content button a:hover::after {
+    right: -10px;
+    opacity: 1;
+}
+
+.ticket {
+    position: relative;
+    width: 100%;
+    height: 960px;
+    /* background-color: red; */
+}
+
+.ticket .mainform {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.ticket .ticketform {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1150px;
+    height: 300px;
+    background-color: white;
+    left: 80px;
+    top: -180px;
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 10px inset rgb(192, 185, 185); */
+    box-shadow: 5px 5px 10px rgb(192, 185, 185);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.ticket .ticketform.active {
+    top: -80px;
+    opacity: 1;
+}
+
+.ticket .ticketform .msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 80px;
+    margin-top: 20px;
+    background-color: #ff8553;
+}
+
+.ticket .ticketform .msg h1 {
+    text-transform: capitalize;
+    font-size: 35px;
+    color: white;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.ticket .ticketform .msg h1.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ticket .ticketform form {
+    /* background-color: #66ccff; */
+    display: flex;
+    width: 95%;
+    height: 95%;
+}
+ 
+.ticket .ticketform form .content {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.ticket .ticketform form .content:nth-child(4) input {
+    margin-top: 50px;
+    border: none;
+    background-color: #2D3142;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.ticket .ticketform form .content:nth-child(4) input:hover {
+    border: 2px solid #ff8553;
+}
+
+.ticket .ticketform form .content:nth-child(1) {
+    transform: translateX(-50px);
+    transition: 1s;
+    opacity: 0;
+}
+
+.ticket .ticketform form .content:nth-child(1).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.ticket .ticketform form .content:nth-child(2) {
+    transform: translateX(-50px);
+    transition: 1s;
+    opacity: 0;
+}
+
+.ticket .ticketform form .content:nth-child(2).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .ticketform form .content:nth-child(3) {
+    transform: translateX(50px);
+    transition: 1s;
+    opacity: 0;
+}
+
+.ticket .ticketform form .content:nth-child(3).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .ticketform form .content:nth-child(4) {
+    transform: translateX(50px);
+    transition: 1s;
+    opacity: 0;
+}
+
+.ticket .ticketform form .content:nth-child(4).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .ticketform form .content label {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.ticket .ticketform form .content input {
+    outline: 1px solid #2D3142;
+    border-radius: 0;
+    /* outline: none; */
+    border: 1px solid rgb(153, 152, 152);
+    margin-top: 5px;
+    background-color: #ff8553;
+    width: 250px;
+    height: 45px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: white;
+}
+
+.ticket .ticketform form .content input:focus {
+    color: #2D3142;
+}
+
+.ticket .ticketform form .content input::placeholder {
+    color: white;
+}
+
+.typenum::-webkit-inner-spin-button {
+    width: 10px;
+}
+
+.ticket .ticketform form .content input#number::-webkit-inner-spin-button {
+
+    display: none;
+
+}
+
+.ticket .ticketform form .content select {
+    outline: 1px solid #2D3142;
+    color: white;
+    background-color: #ff8553;
+    font-size: 17px;
+    width: 250px;
+    padding: 10px 20px;
+    height: 45px;
+    margin-top: 5px;
+    /* appearance: none; */
+}
+
+.ticket .ticketform form .content select option {
+    width: 250px;
+    padding: 10px 20px;
+    height: 45px;
+}
+
+.ticket .ticketform form .content .btn {
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    margin-top: 50px;
+}
+
+/* .ticket .ticketform form .content input {
+    margin-bottom: 130px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+} */
+
+.ticket .ticketform form .content .ticketbtn button::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 0;
+    left: 5%;
+    top: 0;
+    background-color: #ff8553;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.ticket .ticketform form .content .ticketbtn button:hover::before {
+    height: 100%;
+    opacity: 1;
+    right: 50px;
+}
+
+.ticket .ticketform form .content .ticketbtn button::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 0;
+    left: 15%;
+    bottom: 0;
+    background-color: #ff8553;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.ticket .ticketform form .content .ticketbtn button:hover::after {
+    opacity: 1;
+    height: 100%;
+}
+
+.ticket .main {
+    position: absolute;
+    top: 300px;
+    height: 70%;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.ticket .main .left h2 {
+    font-size: 19px;
+    color: white;
+}
+
+.ticket .experience {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    top: 200px;
+}
+
+
+
+.ticket .experience .left {
+    width: 45%;
+}
+
+.ticket .experience .left .starter {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.ticket .experience .left .starter h2 {
+    font-size: 16px;
+    margin-left: 5px;
+    transform: translateX(-100px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff8553;
+    transition: 1s;
+    opacity: 0;
+}
+
+.ticket .experience .left .starter h2.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .experience .left .starter h1 {
+    text-transform: capitalize;
+    margin-top: 20px;
+    transform: translateX(100px);
+    transition: 1s;
+    opacity: 0;
+}
+
+.ticket .experience .left .starter h1.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .experience .left h3 {
+    margin-top: 30px;
+    font-weight: 500;
+    color: gray;
+    width: 480px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.ticket .experience .left h3.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ticket .experience .left .boxes {
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 580px;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ticket .experience .left .boxes .box:nth-child(1) {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.ticket .experience .left .boxes .box:nth-child(2) {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.ticket .experience .left .boxes .box:nth-child(3) {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.ticket .experience .left .boxes .box:nth-child(4) {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1s;
+
+}
+
+.ticket .experience .left .boxes .box:nth-child(1).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .experience .left .boxes .box:nth-child(2).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .experience .left .boxes .box:nth-child(3).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ticket .experience .left .boxes .box:nth-child(4).active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.ticket .experience .left .boxes .box {
+    display: flex;
+    width: 260px;
+    height: 70px;
+}
+
+.ticket .experience .left .boxes .box:nth-child(3) {
+    width: 280px;
+}
+
+.ticket .experience .left .boxes .box img {
+    width: 70px;
+    height: 100%;
+}
+
+.ticket .experience .left .boxes .box h2 {
+    color: black;
+    transform: translateX(0);
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ticket .experience .left .boxes .box .text h3 {
+    opacity: 1;
+    transform: translate(0);
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.right {
+    height: 550px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 530px;
+    height: 500px;
+    margin-left: 5%;
+}
+
+.right .box {
+    width: 270px;
+    height: 200px;
+}
+
+.right .box:nth-child(2) {
+    height: 300px;
+    width: 230px;
+}
+
+.right .box:nth-child(3) {
+    margin-top: -80px;
+    height: 340px;
+    width: 270px;
+}
+
+.right .box:nth-child(4) {
+    margin-top: 20px;
+    height: 240px;
+    width: 230px;
+}
+
+.right .box:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(28, 28, 28);
+}
+
+.right .box:nth-child(1) .img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.right .box:nth-child(1) .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.right .box:nth-child(1) h1 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.right .box:nth-child(1) h1 span {
+    color: #ff8553;
+}
+
+.right .box:nth-child(1) h4 {
+    color: gray;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.right .box:nth-child(2) {
+    background-image: url(../images/enjoying1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.right .box:nth-child(3) {
+    background-image: url(../images/enjoying2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.right .box:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ff8553;
+
+}
+
+.right .box:nth-child(4) span {
+    color: black;
+}
+
+.right .box:nth-child(4) h1 {
+    color: white;
+}
+
+.right .box:nth-child(4) .img {
+    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.right .box:nth-child(4) .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.right .box:nth-child(4) h4 {
+    color: white;
+    margin-top: 15px;
+}
+
+
+
+.attraction {
+    width: 100%;
+    height: 120vh;
+    background-color: #2D3142;
+}
+
+.attraction .top {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.attraction .top h1 {
+    color: white;
+}
+
+.attraction .top h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ff8553;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.attraction .top p {
+    line-height: 25px;
+    color: rgb(160, 160, 160);
+    margin-top: 10px;
+    width: 550px;
+    text-align: center;
+}
+
+.attraction .bottom {
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+
+.attraction .bottom .cards {
+    position: absolute;
+    top: 80px;
+    padding: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.attraction .bottom .cards .card {
+    position: relative;
+    width: 270px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100px);
+    transition: 1s;
+}
+
+.attraction .bottom .cards .card.active {
+    transform: translateY(0px);
+
+}
+
+.attraction .bottom .cards .card::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+.attraction .bottom .cards .card:hover::before {
+    height: 100%;
+}
+
+.attraction .bottom .cards .card:nth-child(1) {
+    background-image: url(../images/roller.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.attraction .bottom .cards .card:nth-child(2) {
+    background-image: url(../images/ride1.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.attraction .bottom .cards .card:nth-child(3) {
+    background-image: url(../images/ferriswheel.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.attraction .bottom .cards .card:nth-child(4) {
+    background-image: url(../images/chairwheel.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+
+.attraction .cards .card h1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 23px;
+    z-index: 10000;
+    color: white;
+    margin-top: 30px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.attraction .cards .card:hover h1 {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.attraction .cards .card h1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery {
+    width: 100%;
+    height: 250vh;
+}
+
+.gallery .top {
+    margin-top: 80px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.gallery .top h3 {
+    margin-top: 50px;
+    color: #ff8553;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+.gallery .top h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery .top p {
+    margin-top: 10px;
+    width: 800px;
+    text-align: center;
+}
+
+.gallery .top .btn {
+    position: relative;
+    /* border: 5px solid black; */
+    margin-top: 30px;
+    background-color: rebeccapurple;
+    width: 250px;
+    height: 50px;
+    transition: 0.6s;
+}
+
+.gallery .top .btn::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: 10px;
+    width: 85%;
+    height: 5px;
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.gallery .top .btn:hover::before {
+    left: 80%;
+    background-color: #ff8553;
+    opacity: 1;
+}
+
+
+.gallery .top .btn::after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    right: 10px;
+    width: 85%;
+    height: 5px;
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.gallery .top .btn:hover::after {
+    right: 80%;
+    background-color: #ff8553;
+    opacity: 1;
+}
+
+.gallery .top .btn a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    background-color: #ff8553;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.gallery .top .btn a::before {
+    position: absolute;
+    content: '';
+    left: -30px;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    transition: 0.6s;
+
+}
+
+.gallery .top .btn:hover a::before {
+    left: -10px;
+    background-color: #f77638;
+}
+
+.gallery .top .btn a::after {
+    position: absolute;
+    content: '';
+    right: -30px;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    transition: 0.3s;
+}
+
+.gallery .top .btn:hover a::after {
+    right: -10px;
+    background-color: #f77638;
+}
+
+.gallery .top .btn a:hover {
+    background-color: #2D3142;
+}
+
+.gallery .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    width: 87%;
+    height: 160vh;
+}
+
+.gallery .bottom .box {
+    margin-top: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.gallery .bottom .box:hover {
+    transform: scale(1.1);
+}
+
+.gallery .bottom .cards:nth-child(1) .box:nth-child(1) {
+    width: 300px;
+    height: 500px;
+    background-image: url(../images/experience4.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.6);
+}
+
+.gallery .bottom .cards:nth-child(1) .box:nth-child(2) {
+    width: 300px;
+    height: 250px;
+    background-image: url(../images/experience.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.6);
+}
+
+.gallery .bottom .cards:nth-child(2) .box:nth-child(1) {
+    width: 300px;
+    height: 250px;
+    background-image: url(../images/experience2.png);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.6);
+}
+
+.gallery .bottom .cards:nth-child(2) .box:nth-child(2) {
+    height: 500px;
+    background-image: url(../images/experience6.jpg);
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.6);
+}
+
+.gallery .bottom .cards:nth-child(3) .box:nth-child(1) {
+    width: 300px;
+    height: 500px;
+    background-image: url(../images/experience5.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.6);
+}
+
+.gallery .bottom .cards:nth-child(3) .box:nth-child(2) {
+    width: 300px;
+    height: 250px;
+    background-image: url(../images/experience3.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.6);
+}
+
+.gallery .bottom .cards .box:nth-child(1):hover {
+    filter: saturate(1);
+}
+
+.gallery .bottom .cards .box:nth-child(2):hover {
+    filter: saturate(1);
+}
+
+.gallery .bottom .cards .box:nth-child(3):hover {
+    filter: saturate(1);
+}
+
+.gallery .bottom .cards .box:nth-child(4):hover {
+    filter: saturate(1);
+}
+
+.gallery .bottom .cards .box:nth-child(5):hover {
+    filter: saturate(1);
+}
+
+.gallery .bottom .cards .box:nth-child(6):hover {
+    filter: saturate(1);
+}
+
+
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(44, 44, 44);
+}
+
+footer .left {
+    height: 300px;
+    width: 27%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .left .links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+footer .left .links h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+footer .left .links a {
+    margin-top: 15px;
+    color: rgb(193, 193, 193);
+    text-transform: capitalize;
+}
+
+footer .left .links a:hover {
+    color: #ff8553;
+}
+
+footer .mid {
+    position: relative;
+    width: 40%;
+    height: 350px;
+}
+
+footer .mid .main {
+    position: absolute;
+    background-color: transparent;
+    width: 80%;
+    height: 93%;
+    display: flex;
+    justify-content: center;
+    top: -70px;
+    left: 50px;
+    border: 12px solid #ff8553;
+
+}
+
+footer .mid .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: 300px;
+    background-color: #2D3142;
+}
+
+footer .mid .img {
+    margin-bottom: 40px;
+    width: 280px;
+    height: 70px;
+    text-align: center;
+}
+
+footer .mid .img img {
+    filter: invert(1);
+    width: 100%;
+    height: 100%;
+}
+
+footer .mid .content h4 {
+    color: white;
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+
+footer .mid .content .links {
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+footer .mid .content .links a {
+    position: relative;
+    margin-left: 10px;
+    transition: 0.6s;
+}
+
+footer .mid .content .links a::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    bottom: 25px;
+    left: 25px;
+    height: 1px;
+    background-color: rgb(172, 219, 237);
+    transition: 0.6s;
+}
+
+footer .mid .content .links a:nth-child(2):before {
+    position: absolute;
+    content: '';
+    width: 0;
+    bottom: 25px;
+    left: 25px;
+    height: 1px;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    transition: 0.6s;
+    opacity: 0.6;
+}
+
+footer .mid .content .links a:hover:nth-child(2):before {
+    border-radius: 10px;
+}
+
+footer .mid .content .links a:hover:nth-child(3)::before {
+    background-color: rgb(38, 144, 84);
+}
+
+footer .mid .content .links a:hover:nth-child(3) img {
+    transform: rotate(360deg) scale(0.7);
+}
+
+footer .mid .content .links a:hover::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    bottom: 3.5px;
+    left: 0;
+    height: 50px;
+}
+
+footer .mid .content .links a:hover img {
+    transition: 0.6s;
+    transform: scale(0.8);
+}
+
+footer .mid .content .links a img {
+    height: 100%;
+    transition: 0.6s;
+}
+
+footer .right {
+    position: relative;
+    width: 30%;
+    height: 300px;
+}
+
+footer .right .content {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .right .content h2 {
+    color: white;
+    opacity: 0.7;
+}
+
+footer .right .content h4 {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    opacity: 0.3;
+}
+
+footer .right .content input {
+    width: 340px;
+    padding: 20px 15px;
+    outline: none;
+}
+
+footer .right .content input:nth-child(2) {
+    padding: 0;
+    font-size: 17px;
+    color: white;
+    background-color: #ff8553;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 115px;
+    right: 20px;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.4s;
+}
+
+footer .right .content input:nth-child(2):hover {
+    background-color: #2D3142;
+
+}
+
+footer .bottom {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(40, 40, 40);
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .bottom .content {
+    position: relative;
+    margin-top: 15px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom .content::before {
+    position: absolute;
+    content: '';
+    top: -20px;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    opacity: 0.3;
+}
+
+footer .bottom .content h4 {
+    color: white;
+    opacity: 0.4;
+}
