@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-.preloader {
+/* .preloader {
     background-color: blue;
     position: absolute;
     top: 0;
@@ -57,7 +57,7 @@ body {
 
 .main.active{
     display: initial;
-}
+} */
 
 nav {
     width: 100%;
