@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merciado Amusement Park</title>
 </head>
-
+    <link rel="icon" href="images/mini icon.png">
         <link rel="stylesheet" href="css/createacount.css">
 
 <body>
@@ -14,24 +14,35 @@
 
     <div class="content">
         <form action="created.html">
-            <div class="fname">
+            <div class="inputfield">
                 <label for="fname">First Name:</label>
                 <input required id="fname" type="text" placeholder="Your First Name">
             </div>
 
-            <div class="lname">
+            <div class="inputfield">
                 <label for="lname">Last Name:</label>
                 <input required id="lname" type="text" placeholder="Your Last Name">
             </div>
 
-            <div class="email">
+            <div class="inputfield">
                 <label for="email">Email:</label>
                 <input required id="email" type="email" placeholder="Your Email">
             </div>
 
-            <div class="pass">
+            <div class="inputfield">
+                <label for="contact">Contact:</label>
+                <input required id="contact" type="password" placeholder="Your number">
+            </div>
+
+            <div class="inputfield">
+                <img id="img1" src="images/passeye.jpg" onclick="pass1()">
                 <label for="pass">Password:</label>
-                <input required id="pass" type="password" placeholder="Your password">
+                <input required id="passinput1" type="password" placeholder="Your Password">
+            </div>
+            <div class="inputfield">
+                <img id="img2" src="images/passeye.jpg" onclick="pass2()">
+                <label for="pass">Confirm Password:</label>
+                <input required id="passinput2" type="password" placeholder="Confirm Password">
             </div>
 
             <div class="btn">
@@ -41,5 +52,39 @@
         </form>
     </div>
     
+
+    <script>
+
+        function pass1(){
+            
+            var passinput = document.getElementById("passinput1");
+            
+            if(passinput.type == "password")
+            {
+                document.getElementById("img1").setAttribute("src","images/eyeclose.png");
+                passinput.setAttribute("type","text");
+            }
+            else{
+                passinput.setAttribute("type","password");
+                document.getElementById("img1").setAttribute("src","images/passeye.jpg");
+            }
+        }
+        function pass2(){
+            
+            var passinput = document.getElementById("passinput2");
+            
+            if(passinput.type == "password")
+            {
+                document.getElementById("img2").setAttribute("src","images/eyeclose.png");
+                passinput.setAttribute("type","text");
+            }
+            else{
+                passinput.setAttribute("type","password");
+                document.getElementById("img2").setAttribute("src","images/passeye.jpg");
+            }
+        }
+
+
+    </script>
 </body>
 </html>
