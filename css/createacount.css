@@ -53,6 +53,10 @@ body{
     padding: 0 20px;
     height: 50px;
 }   
+
+.content form .inputfield input::-webkit-inner-spin-button{
+    display:none;
+}
 .content form .inputfield img{
     opacity: 0;
     border-radius: 20px;
@@ -113,12 +117,14 @@ body{
     color: white;
     font-size: 20px;
 }
+
 .content form .pass input{
     margin-top: 10px;
     width: 250px;
     padding: 0 20px;
     height: 50px;
-} */
+}
+*/
 .btn
 {
     display: flex;
