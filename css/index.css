@@ -22,7 +22,7 @@
     background-color: #2D3142;
 }
 ::-webkit-scrollbar{
-    border-left: 2px solid;
+    /* border-left: 2px solid; */
     cursor: pointer;
     background-color: #f77638;
     width: 20px;
