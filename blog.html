@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="css/blog.css">
 </head>
 
-<body>
+<body id="body">
+
+    <div class="loading" id="preloader">
+
+        <div class="big-circle">
+            <div class="circle">
+
+            </div>
+        </div>
+        <h1>Loading...</h1>
+    </div>
 
     <nav id="nav">
         <div class="logo">
@@ -210,6 +220,7 @@
             document.getElementById("blogcard4").classList.toggle("active",scrollY>1400);
         })
     </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
