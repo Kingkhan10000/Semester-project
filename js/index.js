@@ -54,10 +54,10 @@ if (laptop.matches) {
 
     //attraction cards for laptop starts
     window.addEventListener("scroll", function () {
-        document.getElementById("card1").classList.toggle("active", scrollY > 2100);
-        document.getElementById("card2").classList.toggle("active", scrollY > 2100);
-        document.getElementById("card3").classList.toggle("active", scrollY > 2100);
-        document.getElementById("card4").classList.toggle("active", scrollY > 2100);
+        document.getElementById("card1").classList.toggle("active", scrollY > 2000);
+        document.getElementById("card2").classList.toggle("active", scrollY > 2000);
+        document.getElementById("card3").classList.toggle("active", scrollY > 2000);
+        document.getElementById("card4").classList.toggle("active", scrollY > 2000);
     })
     //attraction cards for laptop ends
 
