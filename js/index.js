@@ -5,6 +5,7 @@ window.addEventListener("load", function () {
     preloader.style.opacity = "0";
     preloader.style.zIndex = "-1";
     preloader.style.transition = "1s";
+    preloader.style.transitionDelay = "1s";
     body.style.transition = "1s";
     body.style.overflow = "initial";
 })
