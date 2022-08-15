@@ -8,26 +8,28 @@
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-button{
+::-webkit-scrollbar-button {
     width: 100%;
-    background-color: #2D3142 ;
-    clip-path: polygon(50% 0%,0% 100%, 100% 100%);
+    background-color: #2D3142;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     border-top: 1px solid #f77638;
     border-bottom: 1px solid #f77638;
     cursor: pointer;
     width: 100px;
     background-color: #2D3142;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     border-left: 2px solid;
     cursor: pointer;
     background-color: #f77638;
     width: 20px;
 }
 
-body {
+/* body {
     overflow: hidden;
     position: relative;
 }
@@ -92,7 +94,7 @@ body {
     100% {
         transform: translateY(-10px);
     }
-}
+} */
 
 nav {
     width: 100%;
@@ -348,6 +350,7 @@ nav ul li .group_list_page li a::before {
     width: 90%;
     height: 100%;
 }
+
 .gallery .content .top {
     margin-left: 35%;
     margin-top: 10px;
@@ -388,10 +391,12 @@ nav ul li .group_list_page li a::before {
     justify-content: center;
     transition: 0.4s;
 }
+
 .gallery .content .bottom.active {
     border: 30px solid #ff8553;
 
 }
+
 .gallery .content .bottom .cards {
     margin-top: 40px;
     display: flex;
@@ -412,17 +417,19 @@ nav ul li .group_list_page li a::before {
     transition: 0.4s;
     filter: hue-rotate(20deg);
 }
+
 .gallery .content .bottom .cards .scard:hover {
     transform: scale(1.1);
     filter: hue-rotate(0);
 }
+
 .gallery .content .bottom .cards .scard.active {
     width: 300px;
     height: 200px;
     opacity: 1;
 }
 
-.gallery .content .bottom .cards .scard img{
+.gallery .content .bottom .cards .scard img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -442,7 +449,7 @@ nav ul li .group_list_page li a::before {
 .gallery .content .bottom .cards .lcard:hover {
     transform: scale(1.05);
     filter: grayscale(0);
-    
+
 }
 
 
@@ -452,7 +459,8 @@ nav ul li .group_list_page li a::before {
     opacity: 1;
 
 }
-.gallery .content .bottom .cards .lcard img{
+
+.gallery .content .bottom .cards .lcard img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -647,7 +655,7 @@ footer .right .content input {
     outline: none;
 }
 
-footer .right .content input:nth-child(2)  {
+footer .right .content input:nth-child(2) {
     padding: 0;
     font-size: 17px;
     color: white;
@@ -660,12 +668,13 @@ footer .right .content input:nth-child(2)  {
     width: 130px;
     height: 50px;
     display: flex;
-    align-items: center;justify-content: center;
-    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     transition: 0.4s;
 }
 
-footer .right .content input:nth-child(2):hover  {
+footer .right .content input:nth-child(2):hover {
     background-color: #2D3142;
 
 }
@@ -703,4 +712,178 @@ footer .bottom .content::before {
 footer .bottom .content h4 {
     color: white;
     opacity: 0.4;
+}
+
+
+
+
+@media screen and (max-width:1280px) and (min-height:800px) and (max-height:1025px) {
+
+    .banner .content {
+        width: 50%;
+        height: 45%;
+    }
+
+    .banner .content h1 {
+        margin-top: 20px;
+    }
+
+    .banner .content p {
+        padding: 0 20px;
+        line-height: 25px;
+        margin-top: 20px;
+    }
+
+    .gallery {
+        width: 100%;
+        height: 260vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery .content {
+        /* display: none; */
+        margin-top: 50px;
+        width: 90%;
+        height: 70%;
+        background-color: skyblue;
+    }
+
+    .gallery .content .top {
+        margin: 0;
+        height: 10%;
+        width: 100%;
+    }
+
+    .gallery .content .bottom {
+        height: 90%;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* .gallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 300vh;
+        background-color: pink;
+    }
+
+
+    .gallery .content {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 80%;
+        background-color: green;
+    }
+
+    .gallery .content .top {
+        margin-left: 0%;
+        margin-top: 10px;
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        box-shadow: 3px 3px 10px rgb(216, 216, 216);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery .content .top h1 {
+        margin-top: 30px;
+        color: #2D3142;
+    }
+
+    .gallery .content .top p {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #ff8553;
+        margin-top: 25px;
+        line-height: 25px;
+        opacity: 0.7;
+        width: 90%;
+    }
+
+    .gallery .content .bottom {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border: 5px solid #ff8553;
+        height: 90%;
+        justify-content: center;
+        transition: 0.4s;
+    }
+
+    .gallery .content .bottom.active {
+        border: 30px solid #ff8553;
+
+    }
+
+    .gallery .content .bottom .cards {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        margin-left: 20px;
+        height: 320vh;
+    }
+
+    .gallery .content .bottom .cards .scard {
+        position: relative;
+        cursor: pointer;
+        margin-top: 25px;
+        border: 2px solid #ff8553;
+        width: 280px;
+        height: 190px;
+        opacity: 0;
+        transition: 0.4s;
+        filter: hue-rotate(20deg);
+    }
+
+    .gallery .content .bottom .cards .scard:hover {
+        transform: scale(1.1);
+        filter: hue-rotate(0);
+    }
+
+    .gallery .content .bottom .cards .scard.active {
+        width: 300px;
+        height: 200px;
+        opacity: 1;
+    }
+
+    .gallery .content .bottom .cards .scard img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gallery .content .bottom .cards .lcard {
+        cursor: pointer;
+        margin-top: 25px;
+        border: 2px solid #ff8553;
+        width: 280px;
+        height: 400px;
+        opacity: 0;
+        transition: 0.4s;
+        filter: grayscale(0.7);
+    } */
+
+    footer {
+        width: 100%;
+        height: 45vh;
+        background-color: #2D3142;
+    }
+
+    footer .right .content input:nth-child(2) {
+        right: 15px;
+        top: 114px;
+
+    }
 }

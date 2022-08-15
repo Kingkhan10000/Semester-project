@@ -84,7 +84,8 @@
         <div class="left">
             <form action="delivered.html">
                 <input required type="text" placeholder="Your Name" pattern="[A-Za-z]{3,32}">
-                <input required type="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                <input required type="email" placeholder="Your Email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
                 <input required type="text" placeholder="Your Subject">
                 <textarea required style="resize: none;" cols="30" rows="10" onkeydown="alphaOnly(this)"
                     placeholder="Your Message PLease"></textarea>
@@ -188,13 +189,8 @@
 
 
 </body>
-<script>
-    function alphaOnly(event) {
-        var key = event.keyCode;
-        return ((key >= 65 && key <= 90) || key == 8);
-    };
+<script src="js/contact.js">
 </script>
-<script src="js/index.js"></script>
 
 
 </html>

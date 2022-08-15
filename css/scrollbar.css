@@ -1,0 +1,20 @@
+::-webkit-scrollbar-button {
+    width: 100%;
+    background-color: #2D3142;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    border-top: 1px solid #f77638;
+    border-bottom: 1px solid #f77638;
+    cursor: pointer;
+    width: 100px;
+    background-color: #2D3142;
+}
+
+::-webkit-scrollbar {
+    /* border-left: 2px solid; */
+    cursor: pointer;
+    background-color: #f77638;
+    width: 20px;
+}

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merciado Amusement Park</title>
-<link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/preloader.css">
     <link rel="icon" href="images/mini icon.png">
 </head>
 
@@ -27,7 +28,7 @@
             <a href="index.html"><img src="images/logo-2.png"></a>
         </div>
         <ul>
-            <li><a href="index.html" >Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="attraction.html">Attractions</a></li>
             <li><a href="ticket.html">Tickets</a></li>
             <li class="group_menu_page"><a id="pages" href="#">Other Pages
@@ -265,7 +266,7 @@
 
                     </div>
                 </div>
-              
+
                 <div class="card" id="s5card3">
                     <div class="background"><img src="images/mark jenner.jpg" alt=""></div>
                     <div class="shadow">
@@ -346,40 +347,6 @@
     </footer>
 
 </body>
-<script src="js/index.js"></script>
-<script>
-
-    window.addEventListener("scroll", function () {
-
-        // for section 1
-        document.getElementById("s1card").classList.toggle("active", scrollY > 200);
-        document.getElementById("carddata").classList.toggle("active", scrollY > 200);
-        document.getElementById("cardlast1").classList.toggle("active", scrollY > 140);
-        document.getElementById("cardlast2").classList.toggle("active", scrollY > 140);
-
-        // for section 2
-        document.getElementById("s2heading").classList.toggle("active", scrollY > 650);
-        document.getElementById("s2para").classList.toggle("active", scrollY > 750);
-
-        // for section 3
-        document.getElementById("card1").classList.toggle("active", scrollY > 1070);
-        document.getElementById("card2").classList.toggle("active", scrollY > 1070);
-        document.getElementById("card3").classList.toggle("active", scrollY > 1070);
-        document.getElementById("card4").classList.toggle("active", scrollY > 1070);
-
-        // for section 4
-        document.getElementById("s4heading").classList.toggle("active", scrollY > 2290);
-        document.getElementById("s4content").classList.toggle("active", scrollY > 2300);
-        document.getElementById("s4para").classList.toggle("active", scrollY > 2250);
-        
-        //for section5
-        document.getElementById("s5card1").classList.toggle("active", scrollY > 3150);
-        document.getElementById("s5card3").classList.toggle("active", scrollY > 3150);
-        
-
-    })
-
-
-</script>
+<script src="js/about.js"></script>
 
 </html>

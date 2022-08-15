@@ -8,6 +8,7 @@
     <title>Merciado Amusement Park</title>
     <link rel="icon" href="images/mini icon.png">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
 </head>
 
 <body id="body">
@@ -197,30 +198,7 @@
         </div>
     </footer>
 
-
-    <script>
-        window.addEventListener("scroll",function(){
-            document.getElementById("img").classList.toggle("active",scrollY>300);
-            document.getElementById("rightfirst").classList.toggle("active",scrollY>300);
-            document.getElementById("mainhead").classList.toggle("active",scrollY>290);
-            document.getElementById("head1").classList.toggle("active",scrollY>300);
-            document.getElementById("head2").classList.toggle("active",scrollY>330);
-            document.getElementById("head3").classList.toggle("active",scrollY>360);
-
-            document.getElementById("date1").classList.toggle("active",scrollY>380);
-            document.getElementById("date2").classList.toggle("active",scrollY>380);
-            document.getElementById("date3").classList.toggle("active",scrollY>380);
-
-
-            //slide down for blog mini cards
-            
-            document.getElementById("blogcard1").classList.toggle("active",scrollY>800);
-            document.getElementById("blogcard2").classList.toggle("active",scrollY>830);
-            document.getElementById("blogcard3").classList.toggle("active",scrollY>1450);
-            document.getElementById("blogcard4").classList.toggle("active",scrollY>1400);
-        })
-    </script>
-    <script src="js/index.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@ window.addEventListener("load", function () {
     preloader.style.zIndex = "-1";
     preloader.style.transition = "1s";
     preloader.style.transitionDelay = "1s";
+    body.style.transitionDelay = "1s";
     body.style.transition = "1s";
     body.style.overflow = "initial";
 })
@@ -15,7 +16,7 @@ var mobile = window.matchMedia("(max-width:720px)")
 var pc = window.matchMedia("(max-width:1280px) and (min-height:800px) and (max-height:1025px)")
 if (laptop.matches) {
 
-    // ticket form sroll
+    // ticket form scroll
     window.addEventListener("scroll", function () {
         var form = document.getElementById("ticketform");
         form.classList.toggle("active", scrollY > 550)
@@ -62,8 +63,12 @@ if (laptop.matches) {
     })
     //attraction cards for laptop ends
 
-
-
+    // navbar fixed changes starts
+    // window.addEventListener("scroll", function () {
+    // document.getElementById("nav").classList.toggle("active", scrollY > 100, scrollY < 200)
+    // document.getElementById("nav").classList.remove("active", )
+    // })
+    // navbar fixed changes ends
 
 
 }
@@ -110,15 +115,22 @@ else if (pc.matches) {
 
 
     //attraction scroll for pc start 
-    
+
     window.addEventListener("scroll", function () {
         document.getElementById("card1").classList.toggle("active", scrollY > 2100);
         document.getElementById("card2").classList.toggle("active", scrollY > 2100);
         document.getElementById("card3").classList.toggle("active", scrollY > 2100);
         document.getElementById("card4").classList.toggle("active", scrollY > 2100);
     })
-    
-    //attraction scroll for pc  
+
+    //attraction scroll for pc  end
+
+
+    // navbar changes
+    // window.addEventListener("scroll", function () {
+    // document.getElementById("nav").classList.toggle("active", scrollY > 100, scrollY < 200)
+    // document.getElementById("nav").classList.remove("active", )
+    // })
 
 }
 
