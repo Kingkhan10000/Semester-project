@@ -5,11 +5,16 @@
     list-style: none;
     text-decoration: none;
     font-family: sans-serif;
-    scroll-behavior: smooth;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
-
+.mobinav {
+    display: none;
+}
+.mobimenusection{
+    display: none;
+}
 
 nav {
     /* position: fixed; */
@@ -23,32 +28,6 @@ nav {
     z-index: 1000000;
 }
 
-/* nav.active {
-    background-color: rgb(218, 217, 217);
-    box-shadow: 0px 5px 10px rgb(209, 209, 209);
-    border-bottom: 2px solid #f77638;
-}
-
-nav.active .logo img {
-    filter: invert(0);
-}
-
-nav.active ul li a {
-    color: initial;
-}
-
-nav.active .arrow img {
-    filter: invert(0);
-}
-
-nav.active .ticketlink a:hover {
-    background-color: initial;
-}
-
-nav.active ul li .group_list_page {
-    background-color: rgb(218, 217, 217);
-} */
-
 nav .logo {
     margin-left: 30px;
     width: 220px;
@@ -56,7 +35,7 @@ nav .logo {
 }
 
 nav .logo img {
-    filter: invert(1);
+    /* filter: invert(1); */
     width: 100%;
     height: 100%;
 }
@@ -173,9 +152,7 @@ nav ul li.group_menu_page {
 nav ul li .group_list_page {
     position: absolute;
     background-color: #2D3142;
-    border: 2px solid #ff8553;
-    border-top: 4px solid #ff8553;
-    border-bottom: 4px solid #ff8553;
+    border: 4px solid #ff8553;
     z-index: 1000000;
     position: absolute;
     height: 0px;
@@ -811,7 +788,7 @@ nav ul li .group_list_page li a::before {
     font-size: 15px;
 }
 
-.right {
+.ticket .experience .right {
     height: 550px;
     margin-top: 50px;
     width: 100%;
@@ -820,7 +797,7 @@ nav ul li .group_list_page li a::before {
     align-items: center;
 }
 
-.right .boxes {
+.ticket .experience .right .boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -829,29 +806,29 @@ nav ul li .group_list_page li a::before {
     margin-left: 5%;
 }
 
-.right .box {
+.ticket .experience .right .box {
     width: 270px;
     height: 200px;
 }
 
-.right .box:nth-child(2) {
+.ticket .experience .right .box:nth-child(2) {
     height: 300px;
     width: 230px;
 }
 
-.right .box:nth-child(3) {
+.ticket .experience .right .box:nth-child(3) {
     margin-top: -80px;
     height: 340px;
     width: 270px;
 }
 
-.right .box:nth-child(4) {
+.ticket .experience .right .box:nth-child(4) {
     margin-top: 20px;
     height: 240px;
     width: 230px;
 }
 
-.right .box:nth-child(1) {
+.ticket .experience .right .box:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -859,45 +836,45 @@ nav ul li .group_list_page li a::before {
     background-color: rgb(28, 28, 28);
 }
 
-.right .box:nth-child(1) .img {
+.ticket .experience .right .box:nth-child(1) .img {
     width: 50px;
     height: 50px;
     margin-bottom: 5px;
 }
 
-.right .box:nth-child(1) .img img {
+.ticket .experience .right .box:nth-child(1) .img img {
     width: 100%;
     height: 100%;
 }
 
-.right .box:nth-child(1) h1 {
+.ticket .experience .right .box:nth-child(1) h1 {
     margin-bottom: 10px;
     color: white;
 }
 
-.right .box:nth-child(1) h1 span {
+.ticket .experience .right .box:nth-child(1) h1 span {
     color: #ff8553;
 }
 
-.right .box:nth-child(1) h4 {
+.ticket .experience .right .box:nth-child(1) h4 {
     color: gray;
     font-size: 16px;
     font-weight: 200;
 }
 
-.right .box:nth-child(2) {
+.ticket .experience .right .box:nth-child(2) {
     background-image: url(../images/enjoying1.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.right .box:nth-child(3) {
+.ticket .experience .right .box:nth-child(3) {
     background-image: url(../images/enjoying2.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.right .box:nth-child(4) {
+.ticket .experience .right .box:nth-child(4) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -906,26 +883,26 @@ nav ul li .group_list_page li a::before {
 
 }
 
-.right .box:nth-child(4) span {
+.ticket .experience .right .box:nth-child(4) span {
     color: black;
 }
 
-.right .box:nth-child(4) h1 {
+.ticket .experience .right .box:nth-child(4) h1 {
     color: white;
 }
 
-.right .box:nth-child(4) .img {
+.ticket .experience .right .box:nth-child(4) .img {
     margin-bottom: 5px;
     width: 60px;
     height: 60px;
 }
 
-.right .box:nth-child(4) .img img {
+.ticket .experience .right .box:nth-child(4) .img img {
     width: 100%;
     height: 100%;
 }
 
-.right .box:nth-child(4) h4 {
+.ticket .experience .right .box:nth-child(4) h4 {
     color: white;
     margin-top: 15px;
 }
@@ -1309,7 +1286,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     background-color: rgb(44, 44, 44);
 }
 
@@ -1381,7 +1358,7 @@ footer .mid .img {
 }
 
 footer .mid .img img {
-    filter: invert(1);
+    /* filter: invert(1); */
     width: 100%;
     height: 100%;
 }
@@ -1464,6 +1441,7 @@ footer .mid .content .links a img {
 footer .right {
     position: relative;
     width: 30%;
+    top: 35px;
     height: 300px;
 }
 
@@ -1588,5 +1566,117 @@ footer .bottom .content h4 {
 
     footer .bottom {
         margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width:330px) {
+    nav {
+        display: none;
+    }
+
+    .mobinav {
+        z-index: -1;
+        padding: 5px 15px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #2D3142;
+    }
+
+    .mobinav .logo {
+        width: 140px;
+        height: 45px;
+    }
+
+    .mobinav .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobinav .menubtn {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .mobinav .menubtn .line {
+        position: absolute;
+        width: 80%;
+        height: 10px;
+        border-radius: 15px;
+        background-color: #f77638;
+        transition: 0.3s;
+    }
+
+    .mobinav .menubtn .line:nth-child(1) {
+        top: 7px;
+        left: 4px;
+    }
+
+    .mobinav .menubtn .line:nth-child(2) {
+        top: 20px;
+        left: 4px;
+    }
+
+    .mobinav .menubtn .line:nth-child(3) {
+        top: 35px;
+        left: 4px;
+    }
+
+
+    .mobinav.active .menubtn .line:nth-child(1) {
+        transform: rotate(45deg) translateX(15px) translateY(5px);
+    }
+    
+    .mobinav.active .menubtn .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobinav.active .menubtn .line:nth-child(3) {
+        transform: rotate(-45deg) translateX(15px) translateY(-5px);
+    }
+
+    .mobimenusection {
+        display: initial;
+        position: absolute;
+        width: 250px;
+        left: -250px;
+        height: 100%;
+        background-color: green;
+        transition: 0.3s;
+    }
+
+    .mobimenusection.active {
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mobimenusection.active ul{
+        margin-top: 20px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .ticket {
+        display: none;
+    }
+
+    .attraction {
+        display: none;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    footer {
+        display: none;
     }
 }
