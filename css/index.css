@@ -392,7 +392,7 @@
         width: 70%;
         height: 300px;
         background-color: white;
-        left: 20%;
+        left: 16%;
         top: -180px;
         border-radius: 5px;
         /* box-shadow: 5px 5px 10px inset rgb(192, 185, 185); */
@@ -507,10 +507,12 @@
     }
 
     .ticket .ticketform form .content input {
-        outline: 1px solid #2D3142;
+        /* outline: 1px solid #2D3142; */
+        outline: none;
+        /* border: 1px solid rgb(153, 152, 152); */
+        border: none;
         border-radius: 0;
         /* outline: none; */
-        border: 1px solid rgb(153, 152, 152);
         margin-top: 5px;
         background-color: #ff8553;
         width: 250px;
@@ -539,7 +541,9 @@
     }
 
     .ticket .ticketform form .content select {
-        outline: 1px solid #2D3142;
+        /* outline: 1px solid #2D3142; */
+        outline: none;
+        border: none;
         color: white;
         background-color: #ff8553;
         font-size: 17px;
@@ -552,6 +556,8 @@
 
     .ticket .ticketform form .content select option {
         width: 250px;
+        outline: none;
+        border: none;
         padding: 10px 20px;
         height: 45px;
     }
@@ -1539,21 +1545,6 @@
     }
 
 
-    /* for mobile responsive */
-    .mobinav {
-        display: none;
-    }
-
-    .mobimenusection {
-        display: none;
-    }
-
-    /* for mobile responsive */
-
-
-
-
-
     @media screen and (max-width:1280px) and (min-height:800px) and (max-height:1025px) {
 
         .banner {
@@ -1768,7 +1759,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width:  40%;
+            width: 40%;
             height: 350px;
         }
 
@@ -1794,12 +1785,12 @@
             background-color: #2D3142;
         }
 
-        footer .mid .content h4{
+        footer .mid .content h4 {
             text-align: center;
             font-size: 18px;
             font-weight: 600;
         }
-        
+
 
         footer .right {
             margin-top: 20px;
@@ -1839,6 +1830,16 @@
         }
     }
 
+
+
+    /* by default mobile arch would be hide */
+    .mobinav {
+        display: none;
+    }
+
+    .mobimenusection {
+        display: none;
+    }
 
     @media screen and (max-width:330px) {
         nav {
@@ -1911,7 +1912,7 @@
         }
 
         .mobimenusection {
-            display: initial;
+            display: flex;
             position: absolute;
             width: 250px;
             left: -250px;
