@@ -1505,7 +1505,7 @@
         transition: 0.4s;
     }
 
-    footer .right .content input[tye="submit"]:hover {
+    footer .right .content input[type="submit"]:hover {
         background-color: #2D3142;
 
     }
