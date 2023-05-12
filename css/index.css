@@ -1480,13 +1480,13 @@
         line-height: 20px;
     }
 
-    footer .right .content input {
+    footer .right .content input[type='email'] {
         width: 100%;
         padding: 20px 15px;
         outline: none;
     }
 
-    footer .right .content input:nth-child(2) {
+    footer .right .content input[type='submit'] {
         padding: 0;
         font-size: 17px;
         color: white;
