@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
     body.style.overflow = "initial";
 })
 // screens for responsive scripts
-var laptop = matchMedia("(max-height:800px)") // for laptop screen
+var laptop = matchMedia("(max-height:800px) and (max-width:1500px)") // for laptop screen
 var mobile = window.matchMedia("(max-width:720px)") // for mobile screen
 var pc = window.matchMedia("(max-width:1280px) and (min-height:800px) and (max-height:1025px)") // for personal computer
 var desktop = window.matchMedia("(min-width:1280px)") // for larger screens
